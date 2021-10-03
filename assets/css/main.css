@@ -3257,7 +3257,10 @@ background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, F
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background: #1e252d;
+			background: #F2994A;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 			content: '';
 			display: block;
 			height: 100%;
@@ -3866,6 +3869,11 @@ background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, F
 				border-style: solid;
 				border-top-width: 2px;
 				text-align: center;
+				display: flex;
+				flex-direction: column;
+			}
+			#main > .posts > article > p, header{
+				flex: 1;
 			}
 
 				#main > .posts > article > :last-child {
